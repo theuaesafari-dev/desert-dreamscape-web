@@ -75,7 +75,7 @@ export function GallerySection() {
         </div>
       </div>
 
-      {active !== null ? (
+      {activeImage ? (
         <div
           className="fixed inset-0 z-[60] flex items-center justify-center bg-ink/95 p-4 backdrop-blur-sm"
           role="dialog"
@@ -92,12 +92,12 @@ export function GallerySection() {
           </button>
           <figure className="max-h-[88vh] max-w-[92vw]" onClick={(e) => e.stopPropagation()}>
             <img
-              src={IMAGES[active].src}
-              alt={IMAGES[active].alt}
+              src={activeImage.src}
+              alt={activeImage.alt}
               className="max-h-[80vh] w-auto object-contain"
             />
             <figcaption className="mt-4 text-center text-xs tracking-[0.2em] text-cream/60 uppercase">
-              {IMAGES[active].alt}
+              {activeImage.alt}
             </figcaption>
           </figure>
         </div>
