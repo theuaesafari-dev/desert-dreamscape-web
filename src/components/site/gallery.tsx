@@ -49,6 +49,9 @@ export function GallerySection() {
     };
   }, [active]);
 
+  const activeImage = active === null ? undefined : IMAGES[active];
+
+
   return (
     <section id="gallery" className="relative bg-ink py-24 sm:py-32">
       <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
